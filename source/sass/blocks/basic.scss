@@ -1,11 +1,148 @@
 .basic {
     min-height: 880px;
 
+    background-image: url("../img/bg-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #2d2a24;
+
+    @media (min-width: 1024px) {
+        @media (min-resolution: 2dppx) {
+            background-image: url("../img/bg-desktop@2x.jpg");
+        }
+    }
+
     @media (max-width: 1023px) {
         min-height: 640px;
+
+        background-image: url("../img/bg-tablet.jpg");
+
+        @media (min-resolution: 2dppx) {
+            background-image: url("../img/bg-tablet@2x.jpg");
+        }
     }
 
     @media (max-width: 767px) {
         min-height: 560px;
+
+        background-image: url("../img/bg-mobile.jpg");
+
+        @media (min-resolution: 2dppx) {
+            background-image: url("../img/bg-mobile@2x.jpg");
+        }
     }
+}
+
+.basic__wrapper {
+    width: 1222px;
+    margin: 0 auto;
+    padding: 305px 0 0 125px;
+
+    color: $color-white;
+
+    @media (max-width: 1281px) {
+        width: 100%;
+    }
+
+    @media (max-width: 1023px) {
+        padding: 180px 50px 0;
+    }
+
+    @media (max-width: 767px) {
+        padding: 151px 25px 0;
+    }
+}
+
+.basic__wrapper h2 {
+    margin: 0;
+    
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 94px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+
+    @media (max-width: 1023px) {
+        font-size: 64px;
+        line-height: 75px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 36px;
+        line-height: 42px;
+    }
+}
+
+.basic__wrapper p {
+    margin: 0;
+    padding: 32px 400px 0 0;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 155%;
+
+    @media (max-width: 1181px) {
+        padding-right: 250px;
+    }
+
+    @media (max-width: 1023px) {
+        padding: 0;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 14px;
+        padding-top: 7px;
+    }
+}
+
+.basic__button {
+    padding: 16px 27px 17px;
+    margin-top: 46px;
+
+    display: inline-block;
+
+    background-color: $light-blue;
+    border-radius: 3px;
+
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $color-white;
+
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    @media (max-width: 1023px) {
+        margin: 57px 0 0 45px;
+    }
+
+    @media (max-width: 767px) {
+        margin: 45px 0 0;
+        padding: 12px 0;
+
+        width: 100%;
+        text-align: center;
+        
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+.basic__for-tablet {
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.basic__for-mobile {
+    @media (min-width: 768px) {
+        display: none;
+    } 
 }
