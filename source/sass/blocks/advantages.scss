@@ -1,8 +1,150 @@
-.advantages__item svg {
-    fill: red;
+.advantages {
+    width: 100%;
 }
 
+.advantages__list {
+    margin: 120px auto;
+    padding: 0;
+    width: 1222px;
 
-.advantages__item:hover svg {
-    fill: black;
+    list-style-type: none;
+
+    display: grid;
+    grid-template-columns: 595px 595px;
+    column-gap: 32px;
+    row-gap: 30px;
+
+    @media (max-width: 1281px)  {
+        width: 90%;
+
+        grid-template-columns: repeat(2, auto);
+    }
+
+    @media (max-width: 1023px) {
+        margin-top: 80px;
+        width: 87.02%;
+
+        column-gap: 30px;
+        grid-template-columns: repeat(auto-fill, minmax(320px, auto));
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 50px;
+        width: 84.38%;
+
+        grid-template-columns: repeat(auto-fill, minmax(270px, auto));
+    }
+}
+
+.advantages__item {
+    position: relative;
+    padding: 40px 45px 35px;
+
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #ebebeb;
+    border-left: none;
+
+    &::before {
+        content: "";
+        width: 5px;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background-color: $light-blue;
+    }
+
+    &:hover,
+    &:focus-within {
+        background-color: $light-blue;
+    }
+
+    @media (max-width: 1023px) {
+        padding: 40px 35px 27px 45px;
+
+        min-height: 360px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 30px 30px 35px; 
+
+        min-height: 340px;
+    }
+}
+
+.advantages__item svg {
+    fill: $light-blue;
+
+    margin-bottom: 20px;
+
+    @media (max-width: 1023px) {
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 767px) {
+        width: 30px;
+        height: 30px;
+
+        margin-bottom: 12px;
+    }
+}
+
+.advantages__item:last-child svg {
+    @media (max-width: 1023px) {
+        margin-bottom: 9px;
+    }
+}
+
+.advantages__item:hover svg,
+.advantages__item:focus-within svg {
+    fill: $color-white;
+}
+
+.advantages__item h3 {
+    margin: 0;
+    min-height: 35px;
+
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+
+    color: $light-blue;
+
+    @media (max-width: 767px) {
+        font-size: 20px;
+    }
+}
+
+.advantages__item:hover h3,
+.advantages__item:focus-within h3 {
+    color: $color-white;
+}
+
+.advantages__item p {
+    margin: 10px 0 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $dark-blue;
+
+    @media (max-width: 1023px) {
+        margin-top: 5px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+
+.advantages__item:hover p,
+.advantages__item:focus-within p {
+    color: $color-white;
 }
