@@ -114,16 +114,22 @@
       </section>
 
       <section class="about">
-        <h2>О&nbsp;компании</h2>
-        <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней. 
-          Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
-        <span class="visually-hidden">Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.
-          Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</span>
-        </p>
-        <button class="about__button">Подробнее</button>
-        <picture>
-          <img src="img/2022y-desktop.png" width="320" height="150" alt="Сине-голобая надпись 2022 года"/>
-        </picture>
+        <div class="about__img">
+          <picture>
+            <source type="image/webp" srcset="img/2022y-desktop.webp 1x, img/2022y-desktop@2x.webp 2x">
+            <img src="img/2022y-desktop.png" srcset="img/2022y-desktop@2x.png 2x" width="150" height="320" alt="Сине-голобая надпись 2022 года"/>
+          </picture>
+        </div>
+        <div class="about__container">
+          <h2>О&nbsp;компании</h2>
+          <div class="about__text">
+            <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней. </p>
+            <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <span>Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
+            <p class="about__js">Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.
+            Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</p>
+          </div>
+          <button class="about__button" type="button">Подробнее</button>
+        </div> 
       </section>
 
       <section class="catalog">
@@ -135,7 +141,12 @@
               <a href="#">
                 <h4>Производство печатных плат</h4>
                 <picture>
-                  <img src="img/catalog/catalog-1-desktop.jpg" width="350" height="650" alt="Часть печатной платы">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/catalog-1-mobile.webp 1x, img/catalog/catalog-1-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/catalog-1-tablet.webp 1x, img/catalog/catalog-1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/catalog/catalog-1-desktop.webp 1x, img/catalog/catalog-1-desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/catalog/catalog-1-mobile.png 1x, img/catalog/catalog-1-mobile@2x.png 2x">
+                  <source media="(max-width: 1023px)" srcset="img/catalog/catalog-1-tablet.png 1x, img/catalog/catalog-1-tablet@2x.png 2x">
+                  <img src="img/catalog/catalog-1-desktop.jpg" srcset="img/catalog/catalog-1-desktop@2x.jpg 2x" width="350" height="650" alt="Часть печатной платы">
                 </picture>              
                 <div class="catalog__arrow">
                   <svg width="5" height="10" viewBox="0 0 5 10">
@@ -148,7 +159,12 @@
               <a href="#">
                 <h4>Монтаж печатных плат</h4>
                 <picture>
-                  <img src="img/catalog/catalog-2-desktop.jpg" width="350" height="650" alt="Часть печатной платы">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/catalog-2-mobile.webp 1x, img/catalog/catalog-2-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/catalog-2-tablet.webp 1x, img/catalog/catalog-2-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/catalog/catalog-2-desktop.webp 1x, img/catalog/catalog-2-desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/catalog/catalog-2-mobile.png 1x, img/catalog/catalog-2-mobile@2x.png 2x">
+                  <source media="(max-width: 1023px)" srcset="img/catalog/catalog-2-tablet.png 1x, img/catalog/catalog-2-tablet@2x.png 2x">
+                  <img src="img/catalog/catalog-2-desktop.jpg" srcset="img/catalog/catalog-2-desktop@2x.jpg 2x" width="350" height="650" alt="Часть печатной платы">
                 </picture>              
                 <div class="catalog__arrow">
                   <svg width="5" height="10" viewBox="0 0 5 10">
@@ -161,7 +177,12 @@
               <a href="#">
                 <h4>Комплектующие для светотехники</h4>
                 <picture>
-                  <img src="img/catalog/catalog-3-desktop.jpg" width="350" height="650" alt="Часть печатной платы">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/catalog-3-mobile.webp 1x, img/catalog/catalog-3-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/catalog-3-tablet.webp 1x, img/catalog/catalog-3-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/catalog/catalog-3-desktop.webp 1x, img/catalog/catalog-3-desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/catalog/catalog-3-mobile.png 1x, img/catalog/catalog-3-mobile@2x.png 2x">
+                  <source media="(max-width: 1023px)" srcset="img/catalog/catalog-3-tablet.png 1x, img/catalog/catalog-3-tablet@2x.png 2x">
+                  <img src="img/catalog/catalog-3-desktop.jpg" srcset="img/catalog/catalog-3-desktop@2x.jpg 2x" width="350" height="650" alt="Часть печатной платы">
                 </picture>              
                 <div class="catalog__arrow">
                   <svg width="5" height="10" viewBox="0 0 5 10">
@@ -176,6 +197,10 @@
 
       <section class="feedback-form" id="form">
         <div class="feedback-form__wrapper">
+          <picture>
+            <source type="image/webp" srcset="img/paper_airplane.webp 1x, img/paper_airplane@2x.webp 2x">
+            <img src="img/paper_airplane.png" srcset="img/paper_airplane@2x.png 2x" width="510" height="285" alt="белый бумажный самолётик">
+          </picture>
           <div class="feedback-form__container">
             <h2 class="visually-hidden">Форма обратной связи</h2>
             <h3>Остались вопросы? Задайте их&nbsp;нам!</h3>
@@ -187,9 +212,9 @@
               </div>
               <div class="feedback-form__phone">
                 <label class="visually-hidden" for="phone">Телефон</label>
-                <input type="tel" id="phone" name="phone" pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){2,12}\d$" title="Введите телефон в формате 88008888888" placeholder="Телефон" required>
+                <input type="tel" id="phone" name="phone" pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){2,12}\d$" title="Введите телефон в формате +7(800)888-88-88" placeholder="Телефон" required>
               </div>
-              <div class="feedback-form__phone">
+              <div class="feedback-form__textarea">
                 <label class="visually-hidden" for="textarea">Ваш вопрос</label>
                 <textarea id="textarea" name="textarea" rows="4" cols="10" placeholder="Ваш вопрос"></textarea>
               </div>
@@ -197,13 +222,10 @@
               <label class="feedback-form__control control">
                 <input class="visually-hidden control__input" type="checkbox" name="politics" id="politics" checked required>
                 <span class="control__mark"></span>
-                <span class="control__label">Я согласен на&nbsp;обработку моих персональных данных</span>
+                <span class="control__label">Я согласен на&nbsp;обработку персональных данных</span>
               </label>
             </form>
           </div>
-          <picture>
-            <img src="img/paper_airplane.png" width="510" height="285" alt="белый бумажный самолётик">
-          </picture>
         </div>
       </section>
     </main>

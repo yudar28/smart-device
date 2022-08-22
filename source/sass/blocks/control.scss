@@ -1,0 +1,81 @@
+.control {
+    position: relative;
+    display: block;
+    padding-left: 36px;
+    cursor: pointer;
+    user-select: none;    
+
+    @media (max-width: 1023px) {
+        padding-left: 25px;
+
+        width: 80%;
+    }
+
+    @media (max-width: 767px) {
+        padding-left: 31px;
+
+        width: 50%;
+    }
+
+    @media (max-width: 532px) {
+        width: 80%;
+    }
+
+    @media (max-width: 460px) {
+        width: 100%;
+    }
+}
+
+.control__mark {
+    position: absolute;
+    top: 9px;
+    left: 10px;
+
+    width: 15px;
+    height: 15px;
+
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background-color: $light-blue;
+
+    @media (max-width: 1023px) {
+        left: 0;
+    }
+
+    @media (max-width: 767px) {
+        left: 5px;
+        top: 8px;
+
+        width: 14px;
+        height: 14px;
+    }
+}
+
+.control__label {
+    margin: 0;
+    display: block;
+    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.control__input[type="checkbox"]:checked + .control__mark {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 1px;
+        width: 12px;
+        height: 8px;
+        background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.988525 2.33333L3.7778 5L7.96171 1' stroke='white'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+    }  
+}
+
+.control__input:focus ~ .control__mark {
+    border-color: #005fcc;
+}

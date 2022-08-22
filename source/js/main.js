@@ -35,6 +35,42 @@ for (let anchor of anchors) {
   })
 }
 
+let buttonAbout = document.querySelector('.about__button');
+let textAbout = document.querySelector('.about__js');
+
+buttonAbout.addEventListener('click', () => {
+  textAbout.classList.toggle('about__js--open');
+
+  if (textAbout.classList.contains('about__js--open')) {
+    buttonAbout.textContent = 'свернуть';
+  } else {
+    buttonAbout.textContent = 'подробнее';
+  }
+})
+
+let titleCatalog = document.querySelector('.catalog__wrapper h3');
+
+window.addEventListener('resize',function(){
+  if (window.innerWidth < 768) {
+    titleCatalog.textContent = 'Товары и услуги Smart Device';
+  } else {
+    titleCatalog.textContent = 'Smart Device предлагает следующие товары и услуги';
+  }
+});
+
+import IMask from 'imask';
+const inputElement = document.querySelector('.feedback-form__phone input');
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const maskOptions = { 
+    mask: '+{7}(000)000-00-00'
+  }
+  IMask(inputElement, maskOptions);
+
+})
+
+
 // ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
