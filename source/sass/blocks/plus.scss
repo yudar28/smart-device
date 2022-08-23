@@ -1,0 +1,51 @@
+@media (max-width: 767px) {
+    .plus {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        right: 0;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 0;
+            width: 15px;
+            height: 1px;
+            background-color: #c4c4c4;
+        }
+
+        &::after {
+            transform: rotate(90deg);
+        }
+
+        &--nojs {
+            display: none;
+        }
+    }
+
+    .plus__nav--opened {
+        &::after {
+            width: 0;
+            height: 0;
+        }
+    }
+
+    .plus__contacts--opened {
+        &::after {
+            width: 0;
+            height: 0;
+        }
+    }
+
+    .page-footer__nav:focus-within .plus::after {
+        width: 0;
+        height: 0;
+    }
+
+    .page-footer__contacts:focus-within .plus::after {
+        width: 0;
+        height: 0;
+    }
+}

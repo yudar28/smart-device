@@ -50,6 +50,14 @@ buttonAbout.addEventListener('click', () => {
 
 let titleCatalog = document.querySelector('.catalog__wrapper h3');
 
+const S = () => {
+  if (window.innerWidth < 768) {
+    titleCatalog.textContent = 'Товары и услуги Smart Device';
+  }
+}
+
+S();
+
 window.addEventListener('resize',function(){
   if (window.innerWidth < 768) {
     titleCatalog.textContent = 'Товары и услуги Smart Device';
@@ -69,6 +77,42 @@ document.addEventListener('DOMContentLoaded', () => {
   IMask(inputElement, maskOptions);
 
 })
+
+//подвал
+
+let navButton = document.querySelector('.page-footer__nav h3');
+let contactsButton = document.querySelector('.page-footer__contacts h3');
+
+let  navList = document.querySelector('.page-footer__list');
+let  contactsList = document.querySelector('.page-footer__contacts-list');
+
+let navPlus = document.querySelector('.plus__nav');
+let contactsPlus = document.querySelector('.plus__contacts');
+
+navPlus.classList.remove('plus--nojs');
+contactsPlus.classList.remove('plus--nojs');
+navList.classList.remove('page-footer__list--nojs');
+contactsList.classList.remove('page-footer__contacts-list--nojs');
+
+navButton.addEventListener('click', () => {
+  navList.classList.toggle('page-footer__list--opened');
+  navPlus.classList.toggle('plus__nav--opened');
+
+  if (contactsList.classList.contains('page-footer__contacts-list--opened')) {
+    contactsList.classList.remove('page-footer__contacts-list--opened');
+    contactsPlus.classList.remove('plus__contacts--opened');
+  }
+});
+
+contactsButton.addEventListener('click', () => {
+  contactsList.classList.toggle('page-footer__contacts-list--opened');
+  contactsPlus.classList.toggle('plus__contacts--opened');
+
+  if (navList.classList.contains('page-footer__list--opened')) {
+    navList.classList.remove('page-footer__list--opened');
+    navPlus.classList.remove('plus__nav--opened');
+  }
+});
 
 
 // ---------------------------------
