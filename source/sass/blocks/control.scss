@@ -3,7 +3,11 @@
     display: block;
     padding-left: 36px;
     cursor: pointer;
-    user-select: none;    
+    user-select: none;   
+    
+    &:hover {
+        opacity: 0.5;
+    }
 
     @media (max-width: 1023px) {
         padding-left: 25px;

@@ -68,6 +68,7 @@ window.addEventListener('resize',function(){
 
 import IMask from 'imask';
 const inputElement = document.querySelector('.feedback-form__phone input');
+const popupElement = document.querySelector('.popup__phone input');
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -75,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mask: '+{7}(000)000-00-00'
   }
   IMask(inputElement, maskOptions);
+  IMask(popupElement, maskOptions);
 
 })
 
@@ -114,6 +116,48 @@ contactsButton.addEventListener('click', () => {
   }
 });
 
+
+//popup
+
+let popupButton = document.querySelector('.page-header__button');
+let popup = document.querySelector('.popup');
+
+let overlay = document.querySelector('.overlay');
+
+let closeButton = document.querySelector('.popup__close');
+let nameImput = document.querySelector('.popup__name input');
+let submitButton = document.querySelector('.popup__submit');
+
+const openPopup = () => {
+  popup.classList.add('popup--opened');
+  overlay.classList.add('overlay--opened');
+  nameImput.focus();
+};
+
+const closePopup = () => {
+  popup.classList.remove('popup--opened');
+  overlay.classList.remove('overlay--opened');
+}
+
+popupButton.addEventListener('click', () => {
+  openPopup();
+});
+
+closeButton.addEventListener('click', () => {
+  closePopup();
+});
+
+overlay.addEventListener('click', () => {
+  closePopup();
+});
+
+const isEscapeKey = (evt) => evt.key === 'Escape';
+
+document.addEventListener('keydown', function(e) {
+  if( isEscapeKey ){ 
+    closePopup();
+	}
+});
 
 // ---------------------------------
 

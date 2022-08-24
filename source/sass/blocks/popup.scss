@@ -1,3 +1,140 @@
 .popup {
     display: none;
+    flex-direction: column;
+
+    position: absolute;
+    // left: 0;
+    // right: 0;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    top: 450px;
+    margin-left: -8px;
+
+    width: 500px;
+    padding: 38px 40px 42px;
+
+    background-color: $light-blue;
+    border-radius: 3px;
+    color: #ffffff;
+    z-index: 3;
+
+    &--opened {
+        display: flex;
+    }
+}
+
+.popup__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 20px;
+    height: 20px;
+
+    padding: 20px;
+
+    border: none;
+    background-color: $light-blue;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.177086 1.03109C-0.0587882 0.795211 -0.0587881 0.412781 0.177087 0.176905C0.412961 -0.0589705 0.79539 -0.0589706 1.03126 0.176905L10.0001 9.14577L18.9689 0.17691C19.2048 -0.0589653 19.5872 -0.0589653 19.8231 0.176911C20.059 0.412786 20.059 0.795217 19.8231 1.03109L10.8543 9.99996L19.8232 18.9689C20.0591 19.2048 20.0591 19.5872 19.8232 19.8231C19.5873 20.059 19.2049 20.059 18.969 19.8231L10.0001 10.8541L1.03118 19.8231C0.795303 20.059 0.412874 20.059 0.176999 19.8231C-0.0588753 19.5872 -0.0588755 19.2048 0.176999 18.9689L9.14592 9.99996L0.177086 1.03109Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.popup h2 {
+    margin: 0;
+    margin-bottom: 4px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.popup p {
+    margin: 0;
+    margin-bottom: 38px;
+    padding-right: 20px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.popup__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+
+.popup__form input,
+.popup__form textarea {
+    padding: 14px;
+
+    border: none;
+    background-color: rgba(4, 20, 39, 0.15);
+    border-radius: 3px;
+
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+
+    &::placeholder {
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.popup__name input {
+    width: 100%;
+}
+
+.popup__phone input {
+    width: 100%;
+}
+
+.popup__textarea textarea {
+    width: 100%;
+    min-height: 155px;
+    padding: 23px 16px;
+}
+
+.popup__submit {
+    width: 100%;
+    padding: 16px 0 13px;
+    margin-top: -3px;
+
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    background-color: $dark-blue;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.popup__control {
+    margin-top: -3px;
+}
+
+.popup__control .control__mark{
+    top: 1px;
 }
