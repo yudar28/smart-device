@@ -50,13 +50,13 @@ buttonAbout.addEventListener('click', () => {
 
 let titleCatalog = document.querySelector('.catalog__wrapper h3');
 
-const S = () => {
+const changeTitleName = () => {
   if (window.innerWidth < 768) {
     titleCatalog.textContent = 'Товары и услуги Smart Device';
   }
 }
 
-S();
+changeTitleName();
 
 window.addEventListener('resize',function(){
   if (window.innerWidth < 768) {
@@ -88,8 +88,8 @@ let contactsButton = document.querySelector('.page-footer__contacts h3');
 let  navList = document.querySelector('.page-footer__list');
 let  contactsList = document.querySelector('.page-footer__contacts-list');
 
-let navPlus = document.querySelector('.plus__nav');
-let contactsPlus = document.querySelector('.plus__contacts');
+let navPlus = document.querySelector('.plus-nav');
+let contactsPlus = document.querySelector('.plus-contacts');
 
 navPlus.classList.remove('plus--nojs');
 contactsPlus.classList.remove('plus--nojs');
@@ -98,21 +98,21 @@ contactsList.classList.remove('page-footer__contacts-list--nojs');
 
 navButton.addEventListener('click', () => {
   navList.classList.toggle('page-footer__list--opened');
-  navPlus.classList.toggle('plus__nav--opened');
+  navPlus.classList.toggle('plus-nav--opened');
 
   if (contactsList.classList.contains('page-footer__contacts-list--opened')) {
     contactsList.classList.remove('page-footer__contacts-list--opened');
-    contactsPlus.classList.remove('plus__contacts--opened');
+    contactsPlus.classList.remove('plus-contacts--opened');
   }
 });
 
 contactsButton.addEventListener('click', () => {
   contactsList.classList.toggle('page-footer__contacts-list--opened');
-  contactsPlus.classList.toggle('plus__contacts--opened');
+  contactsPlus.classList.toggle('plus-contacts--opened');
 
   if (navList.classList.contains('page-footer__list--opened')) {
     navList.classList.remove('page-footer__list--opened');
-    navPlus.classList.remove('plus__nav--opened');
+    navPlus.classList.remove('plus-nav--opened');
   }
 });
 

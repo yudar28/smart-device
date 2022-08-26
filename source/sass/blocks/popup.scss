@@ -125,6 +125,7 @@
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    -webkit-appearance: none;
 
     &:hover {
         opacity: 0.5;

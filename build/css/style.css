@@ -1086,6 +1086,7 @@ button,
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  -webkit-appearance: none;
 }
 
 .popup__submit:hover {
@@ -1152,6 +1153,7 @@ button,
   padding: 16px 27px 17px;
   margin-top: 46px;
   display: inline-block;
+  vertical-align: middle;
   background-color: #00b2ff;
   border-radius: 3px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -1472,6 +1474,7 @@ button,
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  -webkit-appearance: none;
 }
 
 .feedback-form__submit:hover {
@@ -2039,8 +2042,7 @@ button,
     min-height: 340px;
   }
 
-  .advantages__item:nth-child(3),
-  .advantages__item:nth-child(4) {
+  .advantages__item--less-info {
     min-height: 325px;
   }
 
@@ -2263,12 +2265,12 @@ button,
     display: none;
   }
 
-  .plus__nav--opened::after {
+  .plus-nav--opened::after {
     width: 0;
     height: 0;
   }
 
-  .plus__contacts--opened::after {
+  .plus-contacts--opened::after {
     width: 0;
     height: 0;
   }
