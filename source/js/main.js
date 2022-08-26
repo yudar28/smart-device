@@ -126,17 +126,20 @@ let overlay = document.querySelector('.overlay');
 
 let closeButton = document.querySelector('.popup__close');
 let nameImput = document.querySelector('.popup__name input');
-let submitButton = document.querySelector('.popup__submit');
+// let submitButton = document.querySelector('.popup__submit');
+let body = document.querySelector('.page-body');
 
 const openPopup = () => {
   popup.classList.add('popup--opened');
   overlay.classList.add('overlay--opened');
+  body.classList.add('page-body--opened-menu');
   nameImput.focus();
 };
 
 const closePopup = () => {
   popup.classList.remove('popup--opened');
   overlay.classList.remove('overlay--opened');
+  body.classList.remove('page-body--opened-menu');
 }
 
 popupButton.addEventListener('click', () => {

@@ -11,4 +11,8 @@
 
     background-color: #f8fdff;
     color: $dark-blue;
+
+    &--opened-menu {
+        overflow: hidden;
+    }
 }

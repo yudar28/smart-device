@@ -641,6 +641,10 @@ button,
   color: #041827;
 }
 
+.page-body--opened-menu {
+  overflow: hidden;
+}
+
 .page-footer {
   margin-top: auto;
   background-color: #041827;
@@ -727,6 +731,10 @@ button,
 
 .page-footer__column a {
   margin-bottom: 8px;
+}
+
+.page-footer__column a:hover {
+  opacity: 0.5;
 }
 
 .page-footer__contacts-list {
@@ -1554,6 +1562,10 @@ button,
   column-gap: 25px;
   row-gap: 5px;
   list-style-type: none;
+}
+
+.social a:hover {
+  opacity: 0.5;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {

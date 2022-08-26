@@ -180,6 +180,10 @@
 
 .page-footer__column a {
     margin-bottom: 8px;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .page-footer__contacts-list {
