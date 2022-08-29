@@ -125,7 +125,7 @@ let popup = document.querySelector('.popup');
 let overlay = document.querySelector('.overlay');
 
 let closeButton = document.querySelector('.popup__close');
-let nameImput = document.querySelector('.popup__name input');
+let nameImput = document.querySelector('.popup__name input');  
 // let submitButton = document.querySelector('.popup__submit');
 let body = document.querySelector('.page-body');
 
@@ -154,10 +154,9 @@ overlay.addEventListener('click', () => {
   closePopup();
 });
 
-const isEscapeKey = (evt) => evt.key === 'Escape';
+document.addEventListener('keydown', (e) => {
 
-document.addEventListener('keydown', function(e) {
-  if( isEscapeKey ){ 
+  if ( e.key === 'Escape' ) { 
     closePopup();
 	}
 });

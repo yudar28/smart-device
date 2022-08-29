@@ -21,11 +21,11 @@
       <form class="popup__form" action="https://echo.htmlacademy.ru/" method="get">
         <div class="popup__name">
           <label class="visually-hidden" for="name">Имя</label>
-          <input type="text" id="popup-name" name="name" placeholder="Имя" required>
+          <input type="text" id="popup-name" name="name" placeholder="Имя" required autofocus>
         </div>
         <div class="popup__phone">
           <label class="visually-hidden" for="phone">Телефон</label>
-          <input type="tel" id="popup-phone" name="phone" pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){2,12}\d$" title="Введите телефон в формате 88008888888" placeholder="Телефон" required>
+          <input type="tel" id="popup-phone" name="phone" pattern="\+?[0-9\s\-\(\)]+" title="Введите телефон в формате +7(800)8888888" placeholder="Телефон" required>
         </div>
         <div class="popup__textarea">
           <label class="visually-hidden" for="textarea">Ваш вопрос</label>
