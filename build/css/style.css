@@ -1026,6 +1026,8 @@ button,
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   row-gap: 20px;
+  -ms-grid-rows: auto 20px auto 20px auto 20px auto 20px auto;
+  grid-template-areas: "name" "phone" "text" "control" "submit";
 }
 
 .popup__form input,
@@ -1080,8 +1082,36 @@ button,
   line-height: 22px;
 }
 
+.popup__name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: name;
+}
+
+.feedback-form__form > .popup__name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
 .popup__name input {
   width: 100%;
+}
+
+.popup__phone {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: phone;
+}
+
+.feedback-form__form > .popup__phone {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.popup__textarea {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: text;
 }
 
 .popup__phone input {
@@ -1095,9 +1125,13 @@ button,
 }
 
 .popup__submit {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
   width: 100%;
   padding: 16px 0 13px;
   margin-top: -3px;
+  grid-area: submit;
+  grid-row: -2/-3;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -1117,7 +1151,11 @@ button,
 }
 
 .popup__control {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
   margin-top: -3px;
+  grid-area: control;
+  grid-row: -1/-2;
 }
 
 .popup__control .control__mark {
@@ -1451,14 +1489,24 @@ button,
   grid-area: name;
 }
 
+.feedback-form__form > .feedback-form__name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
 .feedback-form__name input {
   width: 100%;
 }
 
 .feedback-form__phone {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: phone;
+}
+
+.feedback-form__form > .feedback-form__phone {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
-  grid-area: phone;
 }
 
 .feedback-form__phone input {
@@ -2243,6 +2291,16 @@ button,
     grid-template-areas: "name" "phone" "textarea" "button" "checkbox";
   }
 
+  .feedback-form__form > .popup__name {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .feedback-form__form > .popup__phone {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+
   .feedback-form__textarea textarea {
     min-height: 180px;
     padding: 23px 16px;
@@ -2253,12 +2311,12 @@ button,
     width: 100%;
   }
 
-  .feedback-form__name {
+  .feedback-form__form > .feedback-form__name {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
 
-  .feedback-form__phone {
+  .feedback-form__form > .feedback-form__phone {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
   }

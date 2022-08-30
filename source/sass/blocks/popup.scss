@@ -70,6 +70,11 @@
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 20px;
+    grid-template-areas: "name"
+    "phone"
+    "text"
+    "control"
+    "submit";
 }
 
 .popup__form input,
@@ -94,8 +99,20 @@
     }
 }
 
+.popup__name {
+    grid-area: name;
+}
+
 .popup__name input {
     width: 100%;
+}
+
+.popup__phone {
+    grid-area: phone;
+}
+
+.popup__textarea {
+    grid-area: text;
 }
 
 .popup__phone input {
@@ -112,6 +129,9 @@
     width: 100%;
     padding: 16px 0 13px;
     margin-top: -3px;
+
+    grid-area: submit;
+    grid-row: -2/-3;
 
     font-family: "Roboto Condensed", "Arial", sans-serif;
     font-weight: 700;
@@ -134,6 +154,9 @@
 
 .popup__control {
     margin-top: -3px;
+
+    grid-area: control;
+    grid-row: -1/-2;
 }
 
 .popup__control .control__mark{
