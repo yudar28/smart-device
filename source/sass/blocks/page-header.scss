@@ -1,10 +1,15 @@
 .page-header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 3;
     
     background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+
+    @media (max-width: 1023px) {
+        position: absolute;
+    }
 }
 
 .page-header__wrapper {

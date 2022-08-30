@@ -5,12 +5,19 @@
     display: grid;
     grid-template-columns: repeat(3, 30px);
     column-gap: 25px;
-    row-gap: 5px;
+    row-gap: 10px;
 
     list-style-type: none;
 }
 
 .social a {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     &:hover {
         opacity: 0.5;
     }

@@ -82,28 +82,28 @@
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="advantages__list">
-          <li class="advantages__item" tabindex="0">
+          <li class="advantages__item">
             <svg width="35" height="35" viewBox="0 0 35 35">
               <use xlink:href="img/sprite_auto.svg#watch-icon"></use>
             </svg>
             <h3>Оперативные сроки</h3>
             <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
           </li>
-          <li class="advantages__item" tabindex="0">
+          <li class="advantages__item">
             <svg width="35" height="35" viewBox="0 0 35 35">
               <use xlink:href="img/sprite_auto.svg#hired"></use>
             </svg>
             <h3>Крупные поставщики</h3>
             <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.</p>
           </li>
-          <li class="advantages__item advantages__item--less-info" tabindex="0">
+          <li class="advantages__item advantages__item--less-info">
             <svg width="35" height="35" viewBox="0 0 35 35">
               <use xlink:href="img/sprite_auto.svg#detective"></use>
             </svg>
             <h3>Полная конфиденциальность</h3>
             <p>По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.</p>
           </li>
-          <li class="advantages__item advantages__item--less-info" tabindex="0">
+          <li class="advantages__item advantages__item--less-info">
             <svg width="35" height="35" viewBox="0 0 35 35">
               <use xlink:href="img/sprite_auto.svg#price"></use>
             </svg>
@@ -212,7 +212,7 @@
               </div>
               <div class="feedback-form__phone">
                 <label class="visually-hidden" for="phone">Телефон</label>
-                <input type="tel" id="phone" name="phone" pattern="\+?[0-9\s\-\(\)]+" title="Введите телефон в формате +7(800)888-88-88" placeholder="Телефон" required>
+                <input type="tel" id="phone" name="phone" pattern="\+?[0-9\s\-\(\)]{10}+" min="12" max="12" title="Введите телефон в формате +7(800)888-88-88" placeholder="Телефон" required>
               </div>
               <div class="feedback-form__textarea">
                 <label class="visually-hidden" for="textarea">Ваш вопрос</label>
