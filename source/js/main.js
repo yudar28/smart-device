@@ -73,11 +73,19 @@ const popupElement = document.querySelector('.popup__phone input');
 document.addEventListener('DOMContentLoaded', () => {
 
   const maskOptions = { 
-    mask: '+{7}(000)000-00-00'
+    mask: '+{7}(000)000-00-00',
   }
-  IMask(inputElement, maskOptions);
-  IMask(popupElement, maskOptions);
 
+  IMask(inputElement, maskOptions);
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const maskOptions = { 
+    mask: '+{7}(000)000-00-00',
+  }
+
+  IMask(popupElement, maskOptions);
 })
 
 //подвал
