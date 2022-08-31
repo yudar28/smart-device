@@ -169,6 +169,31 @@ document.addEventListener('keydown', (e) => {
 	}
 });
 
+import focusTrap from "focus-trap-js";
+document.addEventListener('keydown', event => {
+  focusTrap(event, popup);
+});
+
+const onSmallHeight = () => {
+  if (window.innerHeight < 761) {
+    body.classList.add('page-body--small-height');
+  } else {
+    body.classList.remove('page-body--small-height');
+  }
+};
+
+onSmallHeight();
+
+const changeHeight = () => {
+  if (window.innerHeight < 761) {
+    body.classList.add('page-body--small-height');
+  } else {
+    body.classList.remove('page-body--small-height');
+  }
+}
+
+window.onresize = changeHeight;
+
 // ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.

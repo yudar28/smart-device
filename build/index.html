@@ -13,9 +13,6 @@
   <body class="page-body">
     <div class="overlay"></div>
     <div class="popup" tabindex="0">
-      <button class="popup__close">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
       <h2>Закажите звонок</h2>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
       <form class="popup__form" action="https://echo.htmlacademy.ru/" method="get">
@@ -25,7 +22,7 @@
         </div>
         <div class="popup__phone">
           <label class="visually-hidden" for="phone">Телефон</label>
-          <input type="tel" id="popup-phone" name="phone" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" title="Введите телефон в формате +7(800)8888888" placeholder="Телефон" required>
+          <input type="tel" id="popup-phone" name="phone" pattern="\+?[0-9\s\-\(\)]+" minlength="16" title="Введите телефон в формате +7(800)8888888" placeholder="Телефон" required>
         </div>
         <div class="popup__textarea">
           <label class="visually-hidden" for="textarea">Ваш вопрос</label>
@@ -38,6 +35,9 @@
         </label>
         <button class="popup__submit" type="submit">Отправить</button>
       </form>
+      <button class="popup__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </div>
 
     <header class="page-header">
@@ -212,7 +212,7 @@
               </div>
               <div class="feedback-form__phone">
                 <label class="visually-hidden" for="phone">Телефон</label>
-                <input type="tel" id="phone" name="phone" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" title="Введите телефон в формате +7(800)888-88-88" placeholder="Телефон" required>
+                <input type="tel" id="phone" name="phone" pattern="\+?[0-9\s\-\(\)]+" minlength="16" title="Введите телефон в формате +7(800)888-88-88" placeholder="Телефон" required>
               </div>
               <div class="feedback-form__textarea">
                 <label class="visually-hidden" for="textarea">Ваш вопрос</label>

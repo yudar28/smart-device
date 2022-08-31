@@ -645,6 +645,10 @@ button,
   overflow: hidden;
 }
 
+.page-body--small-height {
+  overflow: scroll;
+}
+
 .page-footer {
   margin-top: auto;
   background-color: #041827;
@@ -962,7 +966,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   position: absolute;
-  top: 50%;
+  right: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -1168,9 +1172,9 @@ button,
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: rgba(3, 16, 27, 0.7);
-  z-index: 2;
+  z-index: 4;
 }
 
 .overlay--opened {
