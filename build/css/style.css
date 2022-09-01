@@ -958,7 +958,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   right: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1161,7 +1161,7 @@ button,
 
 .overlay {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -1172,6 +1172,7 @@ button,
 
 .overlay--opened {
   display: block;
+  overflow-x: hidden;
 }
 
 .basic {
