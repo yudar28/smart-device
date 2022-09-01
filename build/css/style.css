@@ -645,10 +645,6 @@ button,
   overflow: hidden;
 }
 
-.page-body--small-height {
-  overflow: scroll;
-}
-
 .page-footer {
   margin-top: auto;
   background-color: #041827;
@@ -808,9 +804,9 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -819,19 +815,15 @@ button,
 .page-header__contact {
   position: relative;
   margin: 0 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .page-header__contact a {
-  margin-right: 52px;
-  margin-left: 48px;
   position: relative;
-  top: -4px;
-  padding: 10px;
+  padding: 12px 21px 10px;
   color: #f2f5f6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -851,7 +843,8 @@ button,
 }
 
 .page-header__button {
-  margin-right: 59px;
+  margin-top: 6px;
+  margin-right: 61px;
   margin-bottom: 5px;
   padding: 8px 17px 12px;
   min-width: 160px;
@@ -965,7 +958,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   right: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1344,6 +1337,7 @@ button,
   position: relative;
   overflow: scroll;
   cursor: pointer;
+  z-index: 1;
 }
 
 .catalog__item a:hover {
@@ -1362,11 +1356,12 @@ button,
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
+  z-index: 3;
 }
 
 .catalog__arrow {
   position: absolute;
-  left: 290px;
+  right: 0;
   bottom: 0;
   width: 60px;
   height: 60px;
@@ -1379,6 +1374,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  z-index: 3;
   background-color: #00b2ff;
 }
 
@@ -1695,6 +1691,7 @@ button,
   .page-header__contact a {
     margin-right: 10px;
     margin-left: 10px;
+    padding: 12px 10px 10px;
   }
 
   .advantages__list {
@@ -1728,10 +1725,6 @@ button,
 
   .catalog__item img {
     width: 300px;
-  }
-
-  .catalog__arrow {
-    left: 240px;
   }
 
   .feedback-form__wrapper {
@@ -1815,10 +1808,17 @@ button,
 
   .page-header__wrapper {
     padding: 20px 50px 25px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .page-header__contact {
     margin-top: -8px;
+  }
+
+  .page-header__contact a {
+    top: -4px;
   }
 
   .page-header__contact svg {
@@ -1922,10 +1922,6 @@ button,
   .catalog__item img {
     width: 670px;
     height: 250px;
-  }
-
-  .catalog__arrow {
-    left: 610px;
   }
 
   .feedback-form {
@@ -2264,8 +2260,6 @@ button,
   .catalog__arrow {
     width: 40px;
     height: 40px;
-    left: auto;
-    right: 0;
   }
 
   .catalog__arrow svg {

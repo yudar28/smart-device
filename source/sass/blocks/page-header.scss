@@ -20,8 +20,9 @@
 
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+
 
     @media (max-width: 1281px) {
         width: 100%;
@@ -30,6 +31,7 @@
 
     @media (max-width: 1023px) {
         padding: 20px 50px 25px;
+        align-items: center;
     }
 
     @media (max-width: 767px) {
@@ -48,8 +50,8 @@
     position: relative;
     margin: 0 50px;
 
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
     @media (max-width: 1281px) {
         margin: 0 10px;
@@ -65,11 +67,11 @@
 }
 
 .page-header__contact a {
-    margin-right: 52px;
-    margin-left: 48px;
+    // margin-right: 52px;
+    // margin-left: 48px;
     position: relative;
-    top: -4px;
-    padding: 10px;
+    // top: -4px;
+    padding: 12px 21px 10px;
     color: $color-white;
 
     display: flex;
@@ -84,6 +86,11 @@
     @media (max-width: 1281px) {
         margin-right: 10px;
         margin-left: 10px;
+        padding: 12px 10px 10px;
+    }
+
+    @media (max-width: 1023px) {
+        top: -4px;
     }
 
     @media (max-width: 767px) {
@@ -107,7 +114,8 @@
 }
 
 .page-header__button {
-    margin-right: 59px;
+    margin-top: 6px;
+    margin-right: 61px;
     margin-bottom: 5px;
     padding: 8px 17px 12px;
 

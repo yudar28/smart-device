@@ -134,7 +134,6 @@ let overlay = document.querySelector('.overlay');
 
 let closeButton = document.querySelector('.popup__close');
 let nameImput = document.querySelector('.popup__name input');  
-// let submitButton = document.querySelector('.popup__submit');
 let body = document.querySelector('.page-body');
 
 const openPopup = () => {
@@ -162,6 +161,10 @@ overlay.addEventListener('click', () => {
   closePopup();
 });
 
+popup.addEventListener('click', (e)=> {
+  e.stopPropagation();
+})
+
 document.addEventListener('keydown', (e) => {
 
   if ( e.key === 'Escape' ) { 
@@ -174,25 +177,44 @@ document.addEventListener('keydown', event => {
   focusTrap(event, popup);
 });
 
-const onSmallHeight = () => {
-  if (window.innerHeight < 761) {
-    body.classList.add('page-body--small-height');
+// const onSmallHeight = () => {
+//   if (window.innerHeight < 761) {
+    
+//   } else {
+    
+//   }
+// };
+
+// onSmallHeight();
+
+// const changeHeight = () => {
+//   if (window.innerHeight < 761) {
+//     body.classList.add('page-body--small-height');
+//   } else {
+//     body.classList.remove('page-body--small-height');
+//   }
+// }
+
+// window.onresize = changeHeight;
+
+// Фокус у футера
+
+const contacts = document.querySelector('.page-footer__contacts');
+const nav = document.querySelector('.page-footer__nav');
+
+const changeTabindex = () => {
+  if (window.innerWidth > 767) {
+    contacts.setAttribute('tabindex', '-1');
+    nav.setAttribute('tabindex', '-1');
   } else {
-    body.classList.remove('page-body--small-height');
+    contacts.setAttribute('tabindex', '0');
+    nav.setAttribute('tabindex', '0');
   }
 };
 
-onSmallHeight();
+changeTabindex();
 
-const changeHeight = () => {
-  if (window.innerHeight < 761) {
-    body.classList.add('page-body--small-height');
-  } else {
-    body.classList.remove('page-body--small-height');
-  }
-}
-
-window.onresize = changeHeight;
+window.onresize = changeTabindex;
 
 // ---------------------------------
 
